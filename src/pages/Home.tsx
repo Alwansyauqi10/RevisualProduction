@@ -1,18 +1,23 @@
+import { useAuth } from "../context/AuthContext";
+
 function Home() {
+
+  const { user, isAuthenticated } = useAuth();
+
+  console.log("AUTH:", {
+    user,
+    isAuthenticated,
+  });
+
+
   return (
     <>
-      {/* Hero */}
       <section className="relative min-h-screen overflow-hidden bg-[#071A33] text-white">
-        {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/background-hero.jpg')" }}
         />
-
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-[#071A33]/70" />
-
-        {/* Hero Content */}
         <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6">
           <div className="w-full max-w-3xl pt-16">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/50">
@@ -45,7 +50,6 @@ function Home() {
         </div>
       </section>
 
-      {/* About */}
       <section className="relative overflow-hidden bg-white text-[#071A33]">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
@@ -72,7 +76,6 @@ function Home() {
               </div>
             </div>
 
-            {/* Content */}
             <div className="relative max-w-xl lg:pl-8">
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#071A33]/45">
                 Who We Are
@@ -100,16 +103,12 @@ function Home() {
                 <span aria-hidden="true">→</span>
               </a>
 
-              {/* Pixel Accent */}
+       
               <div className="pointer-events-none absolute -bottom-10 -right-12 hidden lg:block">
                 <div className="flex flex-col items-end gap-1">
-                  {/* Pixel 1 */}
+              
                   <span className="h-6 w-6 bg-[#164E7A]/10" />
-
-                  {/* Pixel 2 */}
                   <span className="mr-7 h-6 w-6 bg-[#164E7A]/15" />
-
-                  {/* Pixel 3 */}
                   <span className="mr-14 h-6 w-6 bg-[#164E7A]/20" />
                 </div>
               </div>
@@ -118,7 +117,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Services */}
       <section className="bg-[#F5F7FA] text-[#071A33]">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-4">
@@ -144,7 +142,6 @@ function Home() {
               </a>
             </div>
 
-            {/* Right - Service Cards */}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-3">
               {/* Photography */}
               <div className="rounded-2xl border border-[#071A33]/10 bg-white/50 p-6">
@@ -171,12 +168,10 @@ function Home() {
                 </div>
 
                 <h3 className="mt-6 text-xl font-semibold">Photography</h3>
-
                 <p className="mt-3 text-sm leading-6 text-[#071A33]/55">
                   Capture the real moments with photographs that feel honest,
                   timeless, and alive.
                 </p>
-
                 <a
                   href="/services"
                   className="mt-6 inline-flex items-center gap-3 text-sm font-medium text-[#071A33]"
@@ -186,7 +181,6 @@ function Home() {
                 </a>
               </div>
 
-              {/* Videography */}
               <div className="rounded-2xl border border-[#071A33]/10 bg-white/50 p-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-[#071A33]/10">
                   <svg
@@ -216,7 +210,6 @@ function Home() {
                   Bring your story to life through cinematic motion, sound, and
                   emotion.
                 </p>
-
                 <a
                   href="/services"
                   className="mt-6 inline-flex items-center gap-3 text-sm font-medium text-[#071A33]"
@@ -226,7 +219,6 @@ function Home() {
                 </a>
               </div>
 
-              {/* Event Documentation */}
               <div className="rounded-2xl border border-[#071A33]/10 bg-white/50 p-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-[#071A33]/10">
                   <svg
@@ -253,12 +245,10 @@ function Home() {
                 <h3 className="mt-6 text-xl font-semibold">
                   Event Documentation
                 </h3>
-
                 <p className="mt-3 text-sm leading-6 text-[#071A33]/55">
                   From small gatherings to large celebrations, we document every
                   moment that matters.
                 </p>
-
                 <a
                   href="/services"
                   className="mt-6 inline-flex items-center gap-3 text-sm font-medium text-[#071A33]"
@@ -268,7 +258,6 @@ function Home() {
                 </a>
               </div>
 
-              {/* Creative Production */}
               <div className="rounded-2xl border border-[#071A33]/10 bg-white/50 p-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-[#071A33]/10">
                   <svg
@@ -300,12 +289,10 @@ function Home() {
                 <h3 className="mt-6 text-xl font-semibold">
                   Creative Production
                 </h3>
-
                 <p className="mt-3 text-sm leading-6 text-[#071A33]/55">
                   Ideas, people, and visuals brought together into one
                   meaningful story.
                 </p>
-
                 <a
                   href="/services"
                   className="mt-6 inline-flex items-center gap-3 text-sm font-medium text-[#071A33]"
@@ -319,20 +306,19 @@ function Home() {
         </div>
       </section>
 
-      {/* Portfolio */}
       <section className="relative overflow-hidden bg-white text-[#071A33]">
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:py-20">
-          {/* Top Crop Marks */}
+      
           <div className="pointer-events-none absolute left-6 top-8 h-10 w-10 border-l border-t border-[#071A33]/50 hidden lg:block" />
           <div className="pointer-events-none absolute right-6 top-8 h-10 w-10 border-r border-t border-[#071A33]/50 hidden lg:block" />
-          {/* Bottom Crop Marks */}
+ 
           <div className="pointer-events-none absolute bottom-8 left-6 h-10 w-10 border-b border-l border-[#071A33]/50 hidden lg:block" />
           <div className="pointer-events-none absolute bottom-8 right-6 h-10 w-10 border-b border-r border-[#071A33]/50 hidden lg:block" />
 
           <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-4 lg:p-6">
-            {/* Portfolio Images */}
+    
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:col-span-3">
-              {/* Portfolio 1 */}
+       
               <div className="group overflow-hidden rounded-3xl bg-[#E8F1F8]">
                 <img
                   src="/portfolio-1.jpg"
@@ -341,7 +327,6 @@ function Home() {
                 />
               </div>
 
-              {/* Portfolio 2 */}
               <div className="group overflow-hidden rounded-3xl bg-[#E8F1F8]">
                 <img
                   src="/portfolio-2.jpg"
@@ -350,7 +335,6 @@ function Home() {
                 />
               </div>
 
-              {/* Portfolio 3 */}
               <div className="group overflow-hidden rounded-3xl bg-[#E8F1F8]">
                 <img
                   src="/portfolio-3.jpg"
@@ -360,13 +344,11 @@ function Home() {
               </div>
             </div>
 
-            {/* Section Introduction */}
             <div className="flex flex-col justify-center lg:col-span-1 lg:pl-4">
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#071A33]/45">
                 Our Work
               </p>
 
-              {/* Small Editorial Line */}
               <div className="mt-4 h-px w-12 bg-[#071A33]/30" />
 
               <h2 className="font-display mt-5 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl">
@@ -460,9 +442,7 @@ function Home() {
         </div>
       </section> */}
 
-      {/* CTA */}
       <section className="relative overflow-hidden bg-[#071A33] text-white">
-        {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -470,13 +450,11 @@ function Home() {
           }}
         />
 
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-[#071A33]/65" />
 
-        {/* Content */}
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:py-32">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-4">
-            {/* Heading */}
+  
             <div className="lg:col-span-3">
               <p className="text-sm font-medium uppercase tracking-[0.25em] text-white/50">
                 Let's Work Together
@@ -489,12 +467,10 @@ function Home() {
               </h2>
             </div>
 
-            {/* CTA */}
             <div className="lg:justify-self-end">
               <p className="mb-6 max-w-xs text-sm leading-6 text-white/55">
                 Have an event or project in mind? <br /> We'd love to hear from you.
               </p>
-
               <a
                 href="/contact"
                 className="inline-flex h-12 items-center gap-3 rounded-full bg-white px-6 text-sm font-medium text-[#071A33] transition hover:bg-white/90"

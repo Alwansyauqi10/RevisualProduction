@@ -8,7 +8,7 @@ function Navbar() {
           <a className="text-sm text-white/70 transition hover:text-white" href="/about">About</a>
           <a className="text-sm text-white/70 transition hover:text-white" href="/services">Services</a>
           <a className="text-sm text-white/70 transition hover:text-white" href="/portfolio">Portfolio</a>
-          <a className="text-sm text-white/70 transition hover:text-white" href="/blogs">Blogs</a>
+          <a className="text-sm text-white/70 transition hover:text-white" href="/blog">Blogs</a>
           <a className="text-sm text-white/70 transition hover:text-white" href="/teams">Teams</a>
           <a className="text-sm text-white/70 transition hover:text-white" href="/contact">Contact</a>
         </div>
