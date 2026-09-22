@@ -5,7 +5,6 @@ import { uploadBlogImageService } from "../../service/fileService";
 import {
   getBlogByIdService,
   updateBlogService,
-  type Blog,
 } from "../../service/blogService";
 
 function EditBlog() {
@@ -15,7 +14,7 @@ function EditBlog() {
   const [excerpt, setExcerpt] = useState("");
   const [content, setContent] = useState("");
   const [coverImage, setCoverImage] = useState("");
-  const [author, setAuthor] = useState("");
+  const [author] = useState("");
   const [newCoverImage, setNewCoverImage] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
