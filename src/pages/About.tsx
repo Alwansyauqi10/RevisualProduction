@@ -126,9 +126,7 @@ function About() {
               </p>
             </div>
 
-            {/* CARDS */}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:col-span-3">
-              {/* CREATIVE */}
               <div className="rounded-[1.5rem] border border-[#071A33]/10 bg-white p-6">
                 <span className="text-xs font-medium uppercase tracking-[0.15em] text-[#071A33]/40">
                   01
@@ -142,7 +140,6 @@ function About() {
                 </p>
               </div>
 
-              {/* COLLABORATIVE */}
               <div className="rounded-[1.5rem] border border-[#071A33]/10 bg-white p-6">
                 <span className="text-xs font-medium uppercase tracking-[0.15em] text-[#071A33]/40">
                   02
@@ -156,7 +153,6 @@ function About() {
                 </p>
               </div>
 
-              {/* HUMAN CENTERED */}
               <div className="rounded-[1.5rem] border border-[#071A33]/10 bg-white p-6">
                 <span className="text-xs font-medium uppercase tracking-[0.15em] text-[#071A33]/40">
                   03
@@ -174,11 +170,9 @@ function About() {
         </div>
       </section>
 
-      {/* TEAM PREVIEW */}
       <section className="bg-white text-[#071A33]">
         <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-            {/* LEFT */}
             <div className="max-w-xl">
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#071A33]/45">
                 Our Team
@@ -203,7 +197,6 @@ function About() {
               </a>
             </div>
 
-            {/* RIGHT — PROFILE PREVIEW */}
             <div className="flex items-center justify-center lg:justify-end">
               <div className="flex -space-x-4 sm:-space-x-5">
                 <img
@@ -235,7 +228,6 @@ function About() {
         </div>
       </section>
 
-      {/* QUOTE */}
       <section className="relative overflow-hidden bg-[#071A33] text-white">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -248,12 +240,10 @@ function About() {
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/50">
               Our Belief
             </p>
-
             <blockquote className="font-display text-4xl my-5 font-medium leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
               “Every moment has a story, and every story deserves to be
               remembered.”
             </blockquote>
-
             <p className="font-display text-sm uppercase font-medium tracking-[0.15em] text-white/50">
               — Revisual Production
             </p>

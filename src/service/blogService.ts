@@ -23,13 +23,26 @@ export const createBlogService = async (blog: {
   return newBlog;
 };
 
-export const getBlogsService = async () => {
+export const getBlogsService = async (
+  page: number,
+  take: number
+) => {
   const queryBuilder = Backendless.DataQueryBuilder.create();
+
   queryBuilder.setSortBy(["created DESC"]);
+
+  queryBuilder.setPageSize(take);
+
+  queryBuilder.setOffset((page - 1) * take);
 
   const blogs = await Backendless.Data.of("blogs").find(queryBuilder);
 
-  return blogs;
+  const total = await Backendless.Data.of("blogs").getObjectCount();
+
+  return {
+    blogs,
+    total,
+  };
 };
 
 export const getBlogByIdService = async (

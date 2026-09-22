@@ -376,79 +376,8 @@ function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      {/* <section className="bg-white py-24 text-[#071A33] lg:py-32">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-4 lg:items-center"> 
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#071A33]/45">
-                What They Say
-              </p>
-
-              <h2 className="font-display mt-5 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl">
-                TRUSTED
-                <br />
-                BY MANY.
-              </h2>
-            </div>
-
-            <div className="relative lg:col-span-3">
-              <span className="font-display absolute -top-8 left-0 text-7xl leading-none text-[#071A33]/10">
-                “
-              </span>
-
-              <div className="pl-12">
-                <blockquote className="max-w-3xl text-xl leading-8 text-[#071A33]/75 sm:text-2xl">
-                  “The photos are beyond amazing. Revisual really captured the
-                  atmosphere and emotions of our graduation day.”
-                </blockquote>
-
-                <div className="mt-8 flex items-center justify-between gap-6">
-                  <div className="flex items-center gap-6">
-                    <img
-                      src="https://randomuser.me/api/portraits/women/44.jpg"
-                      alt="Sarah A."
-                      className="h-12 w-12 rounded-full object-cover"
-                    />
-                    <div>
-                      <p className="text-sm font-semibold">Sarah A.</p>
-                      <p className="mt-1 text-xs text-[#071A33]/45">
-                        UT Graduate 2024
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <button
-                      type="button"
-                      aria-label="Previous testimonial"
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-[#071A33]/10 text-[#071A33]/50 transition hover:border-[#071A33]/30 hover:text-[#071A33]"
-                    >
-                      ←
-                    </button>
-
-                    <button
-                      type="button"
-                      aria-label="Next testimonial"
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-[#071A33]/10 text-[#071A33]/50 transition hover:border-[#071A33]/30 hover:text-[#071A33]"
-                    >
-                      →
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section className="relative overflow-hidden bg-[#071A33] text-white">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/background-cta.jpg')",
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center"style={{ backgroundImage: "url('/background-cta.jpg')",}}/>
 
         <div className="absolute inset-0 bg-[#071A33]/65" />
 

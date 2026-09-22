@@ -3,11 +3,9 @@ import { useNavigate } from "react-router";
 import { loginService } from "../service/authService";
 import { useAuth } from "../context/AuthContext";
 
-
 function Login() {
   const navigate = useNavigate();
   const { login } = useAuth();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -37,11 +35,9 @@ function Login() {
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#071A33]/45">
               Revisual Production
             </p>
-
             <h1 className="font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
               WELCOME BACK.
             </h1>
-
             <p className="mt-4 text-sm leading-6 text-[#071A33]/55">
               Sign in to manage your Revisual Production content.
             </p>
